@@ -1,0 +1,135 @@
+/*
+    Mode Sombre auto par Léo LESIMPLE
+    CSS 3.0 
+    Version 3.2 du 20 mai 2022 
+    © Léo LESIMPLE
+*/
+:root{
+    /* Nightmode */
+    --bg-body-dark:#1B1E24;
+    --txt-dark:#f3f3f3;
+    --body-color-dark:#f5f5f7;
+    --a-color-dark:#5fa9ee;
+    --coming-color-dark:#c2c2c2;
+    --active-color-dark:#0e1118;
+    --hr-bg-dark:#fff;
+    --out-btn-dark:#f5f5f7;
+    --nav-bg-dark:#353637;
+    --sh-dark:#c7c7c75e;
+    --h-color-dark:#f5f5f7;
+    --btn-ony-h-dark:#808080;
+    --dropdown-menu-dark:#212529;
+    --unightmode-dark:#212529;
+        /* v1.3 */
+    --nav-color-dark:#d2cdcd;
+    --principal-para-dark:#cbd1d7;
+    --secondary-para-dark:#cbd1d7;
+    --footer-link-dark:#fff;
+    /* Lightmode */
+    --win-sh:#00000040;
+    --win-bg:#ffffff82;
+    --out-btn-color:#3c3c3c;
+    --navbar-bg:#f5efe6;
+    --btn-outsec-h:#6c757d;
+    --btn-primary-h:#6494ed9d;
+    --sh-lg-color:#606060;
+    --quickaccess-color:#6b5533;
+    --coming-color:#212529;
+    --news-color-dark:#fff !important;
+    /* Couleurs classiques */
+    --blanc: #fff;
+    --noir:#000;
+}
+
+@media (prefers-color-scheme: dark) {
+    body, .text-dark {
+    background: var(--bg-body-dark) !important;
+    color: var(--txt-dark) !important;
+    }
+    a {
+    color: var(--a-color-dark);
+    } 
+    .dark-mode-toggle{
+        color: #fff;
+    }
+    .fas{
+        color: var(--out-btn-dark) !important;
+    }
+    .active{
+        color: var(--active-color-dark) !important;
+    }
+    hr{
+        background-color: var(--hr-bg-dark) !important;
+    }
+    img {
+    filter: grayscale(20%);
+    }
+    .out-btn{
+    cursor: default;
+    border-color: var(--out-btn-dark) !important;
+    color: var(--out-btn-dark) !important;
+    }
+    .shadow{
+        box-shadow: 0.5rem var(--sh-dark) !important;
+    }
+    h1, h2, h3, h4, h5, h6, .lead, p, small{
+        color: var(--h-color-dark);
+    }
+    code{
+        color: var(--code-color-dark);
+    }
+    .im-shadow-drop{
+        filter: drop-shadow(0 0 0.75rem var(--blanc) );
+    }
+    .dropdown-menu{
+        background-color: var(--dropdown-menu-dark);
+    }
+    .nav-link, .navbar-brand, .dropdown-item{
+        color: var(--body-color-dark) !important;
+    }
+    .nav-link-white{
+        color: var(--noir) !important;
+    }
+    .bg-light{
+        background: transparent !important;
+    }
+    .shadow-lg-white{
+    box-shadow: 0 0 1.5rem rgba(255, 255, 255, 0.29) !important;
+    }
+    .border{
+        border: 0 !important;
+    }
+    .section-desc{
+        color: #aeaeae !important;
+    }
+    .details{
+        background-color: #3c3c3c !important;
+    }
+    .title-news,.desc-news{
+        color: var(--news-color-dark) !important;
+    }
+
+    /* CSS v1.3 */
+
+    .nav-item{
+        color: var(--nav-color-dark) !important;
+    }
+    .principal-para{
+        color: var(--principal-para-dark) !important;
+    }
+    .secondary-para{
+        color: var(--secondary-para-dark) !important;
+    }
+    .footer-link{
+        color: var(--footer-link-dark) !important;
+    }
+    .docs-headlines{
+        color: #fff !important;
+    }
+    .highlight-section, .second-section, .third-section{
+        background-color: rgb(19, 21, 23) !important;
+    }
+    .dashboard-item{
+        border-color: #f3f3f3 !important;
+    }
+}

@@ -1,0 +1,238 @@
+.big-img {
+  width: 100% !important;
+  margin: auto !important;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 2rem;
+}
+
+.big-img>img {
+  border-radius: 2.5rem;
+  max-width: 45%;
+  margin: 4rem;
+  margin-bottom: 0 !important;
+  filter: drop-shadow(rgba(0, 0, 0, 0.15) 0px 20px 20px);
+}
+
+.event-title {
+  font-size: 96px;
+  text-align: center;
+  margin-top: 1.5rem;
+  line-height: 1.2;
+  margin-bottom: 0rem !important;
+}
+
+.event-subtitle {
+  font-size: 28px !important;
+  text-align: center;
+  max-width: 1000px;
+  margin: auto !important;
+  line-height: 1.2;
+}
+
+.expl>p {
+  font-size: 24px !important;
+}
+
+.principal-para {
+  margin-bottom: .5rem !important;
+}
+
+.link-outline {
+  padding: 0.7rem 1.7rem;
+}
+
+.img-event {
+  border-radius: 22px !important;
+  width: auto !important;
+  height: 400px !important;
+  margin: 2.5rem 0;
+  filter: drop-shadow(rgba(0, 0, 0, 0.15) 0px 20px 20px);
+  transform: rotate(5deg);
+}
+
+.event-details {
+  width: 100% !important;
+  padding: 0rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 4rem;
+}
+
+.details-container {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width: 100% !important;
+  padding-top: 5rem !important;
+}
+
+.details-container-invert {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width: 100% !important;
+  padding-top: 5rem !important;
+}
+
+.details-illustration {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  height: 287px;
+}
+
+.details-txt {
+  width: 50%;
+}
+
+.clock {
+  border-radius: 50%;
+  background: #ddd url(./img/svg/hours.svg) no-repeat center;
+  background-size: 88%;
+  height: 8em;
+  padding: 1%;
+  position: relative;
+  width: 8em;
+  border: 5px solid #000;
+  margin-right: 2.5rem;
+}
+
+.clock.simple:after {
+  background: #000 !important;
+  border-radius: 50% !important;
+  content: "";
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 5% !important;
+  height: 5% !important;
+  z-index: 100000 !important;
+}
+
+.minutes-container,
+.hours-container,
+.seconds-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.hours {
+  background: #000;
+  height: 20%;
+  left: 48.75%;
+  position: absolute;
+  top: 30%;
+  transform-origin: 50% 100%;
+  width: 2.5%;
+}
+
+.minutes {
+  background: #000;
+  height: 40%;
+  left: 49%;
+  position: absolute;
+  top: 10%;
+  transform-origin: 50% 100%;
+  width: 2%;
+}
+
+.seconds {
+  background: #000;
+  height: 45%;
+  left: 49.5%;
+  position: absolute;
+  top: 14%;
+  transform-origin: 50% 80%;
+  width: 1%;
+  z-index: 8;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.hours-container {
+  animation: rotate 43200s infinite linear;
+}
+
+.minutes-container {
+  animation: rotate 3600s infinite linear;
+}
+
+.seconds-container {
+  animation: rotate 60s infinite linear;
+}
+
+.time {
+  font-size: 45px;
+  padding: 0 4rem;
+  margin-bottom: 1rem !important;
+}
+
+.details-txt>p {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.iconside>img {
+  display: block;
+}
+
+.iconside {
+  font-size: 40px !important;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#calendarbtn {
+  display: flex;
+  width: fit-content;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendar-container {
+  margin-left: 4rem !important;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.savethedate {
+    width: fit-content;
+    border: 2px solid #aaa;
+    margin-top: 2rem !important;
+    margin: auto;
+    padding: .375rem 1rem;
+    border-radius: .5rem;
+    color: rgb(150, 150, 150);
+}

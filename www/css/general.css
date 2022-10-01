@@ -1,0 +1,92 @@
+/*
+    Formulaires de Cuisinella Villennes
+    CSS 3.0 
+    Version 2.1 du 10 mai 2022 
+    © Léo LESIMPLE
+*/
+:root{
+  --brand-color:#de0000;
+  --brand-color-bis:#c20f0f;
+  --gradient-dark-color:rgba(170, 0, 0, 0.502);
+  --gradient-light-color:rgba(255, 50, 50, 0.502);
+}
+@font-face {
+  font-family: Pacifico;
+  src: url(./Pacifico/Pacifico-Regular.ttf);
+}
+
+sub,
+sup {
+  position: relative;
+  font-size: 0.75em;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+code {
+  font-family: monospace;
+}
+code {
+  color: #3367d6;
+  word-wrap: break-word;
+}
+
+.desc{
+    font-size: 1.25rem;
+    font-weight: 500;
+    cursor: help;
+}
+
+
+
+/* Branding */
+
+.bg-brand{
+  background-color: var(--brand-color);
+}
+.text-red{
+  color: var(--brand-color);
+  font-weight: bold;
+  font-size: 60px !important;
+}
+
+/* Homepage */
+
+.div-home-hero {
+  height: 100vh;
+  margin: 0;
+  background: 
+  radial-gradient(
+    farthest-side at bottom left,
+    var(--gradient-dark-color), 
+    transparent
+  ),
+  radial-gradient(
+    farthest-corner at bottom right,
+    #ff323280, 
+    transparent 400px
+  );
+  height: 100% !important;
+}
+.div-home-hero-invert {
+  margin: 0;
+  background: 
+  radial-gradient(
+    farthest-side at top left,
+    var(--gradient-dark-color), 
+    transparent
+  ),
+  radial-gradient(
+    farthest-corner at top right,
+    var(--gradient-light-color),
+    transparent 400px
+  );
+}
