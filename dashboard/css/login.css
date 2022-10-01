@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,slnt,wdth,wght,GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC@8..144,-5,76,530,-57,388,28,689,-233,707,497,760&display=swap');
+
+.bg-red {
+  background: rgba(252, 48, 48, 0.749);
+}
+
+@media screen and (max-width:768px) {
+  .login {
+    display: none !important;
+  }
+}
+
+.login {
+  color: rgb(0, 0, 0) !important;
+  width: 30% !important;
+  height: auto !important;
+  border-radius: 20px;
+  padding: 4rem;
+  background: rgba(252, 48, 48, 0.749);
+  backdrop-filter: blur(9px) !important;
+  -webkit-backdrop-filter: blur(9px) !important;
+  position: fixed;
+  z-index: 2;
+}
+
+.bg-image {
+  position: fixed;
+  z-index: 1 !important;
+}
+
+.bg-image {
+  width: 100vw;
+  height: 100vh;
+}
+
+.h1-connect {
+  font-size: 50px !important;
+  font-weight: 300;
+  margin-bottom: 30px !important;
+  font-family: 'Roboto Flex', sans-serif !important;
+  font-style: italic;
+  font-stretch: 100;
+  font-variation-settings: 'GRAD' 46, 'slnt' -2, 'XTRA' 446, 'XOPQ' 45, 'YOPQ' 29, 'YTLC' 514, 'YTUC' 712, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738;
+}
+
+h4 {
+  font-family: 'Roboto Flex', sans-serif !important;
+  font-style: italic;
+  font-stretch: 100;
+  font-variation-settings: 'GRAD' 46, 'slnt' -2, 'XTRA' 446, 'XOPQ' 45, 'YOPQ' 29, 'YTLC' 514, 'YTUC' 712, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738;
+
+}
+
+.input-group-text {
+  display: flex;
+  align-items: center;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #ffffff;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #464646;
+  border: 1px solid #000000;
+  border-radius: .375rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #ffffff;
+  background-color: #4d4d4d;
+  background-clip: padding-box;
+  border: 1px solid #38424b;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: .375rem;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
