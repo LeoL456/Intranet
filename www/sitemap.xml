@@ -9,67 +9,52 @@
 
 <url>
   <loc>https://onyos.fr/</loc>
-  <lastmod>2022-07-27T09:37:57+00:00</lastmod>
+  <lastmod>2022-05-08T20:18:13+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://onyos.fr/index.php</loc>
-  <lastmod>2022-07-27T09:37:57+00:00</lastmod>
+  <loc>https://onyos.fr/index.html</loc>
+  <lastmod>2022-05-08T20:18:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://onyos.fr/form.php</loc>
-  <lastmod>2022-07-27T09:37:57+00:00</lastmod>
+  <lastmod>2022-05-08T20:18:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://onyos.fr/news.php</loc>
-  <lastmod>2022-07-27T09:37:57+00:00</lastmod>
+  <loc>https://onyos.fr/docs.html</loc>
+  <lastmod>2022-05-08T20:18:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://onyos.fr/docs.php</loc>
-  <lastmod>2022-07-27T09:37:57+00:00</lastmod>
+  <loc>https://onyos.fr/docs/discover-code.html</loc>
+  <lastmod>2022-05-08T20:18:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://onyos.fr/discover.php</loc>
-  <lastmod>2022-07-27T09:37:57+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://onyos.fr/docs/status/</loc>
-  <lastmod>2022-07-27T09:37:57+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://onyos.fr/docs/learn-input.php</loc>
-  <lastmod>2022-07-27T09:37:57+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://onyos.fr/docs/cuisinellactu.php</loc>
-  <lastmod>2022-07-27T09:37:57+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://onyos.fr/docs/ar-number.php</loc>
-  <lastmod>2022-07-27T09:37:57+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://onyos.fr/docs/pc-side/bookmark.php</loc>
-  <lastmod>2022-07-27T09:37:57+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://onyos.fr/docs/discover-code.php</loc>
-  <lastmod>2022-07-27T09:37:57+00:00</lastmod>
+  <loc>https://onyos.fr/docs/learn-input.html</loc>
+  <lastmod>2022-05-08T20:18:13+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://onyos.fr/docs/nouveau.php</loc>
-  <lastmod>2022-07-27T09:37:57+00:00</lastmod>
+  <loc>https://onyos.fr/docs/ar-table.html</loc>
+  <lastmod>2022-05-08T20:18:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://onyos.fr/docs/ar-number.html</loc>
+  <lastmod>2022-05-08T20:18:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://onyos.fr/docs/legal/mentions-legales.html</loc>
+  <lastmod>2022-05-08T20:18:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://onyos.fr/docs/legal/rgpd.html</loc>
+  <lastmod>2022-05-08T20:18:13+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 

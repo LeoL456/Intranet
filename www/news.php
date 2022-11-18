@@ -48,7 +48,7 @@
     <p class='principal-para news-para'>Retrouvez toutes les actualités internes à Cuisinella Villennes en un seul point. Vous êtes prévenus des nouvelles actus par e-mail directement.</p>
   </div>
   <div class="last-news">
-    <a href="#down" class="link link-principal-hero">Accéder aux dernières news</a>
+    <a href="#down" class="link link-principal">Accéder aux dernières news</a>
   </div>
   <div class="news-section">
     <?php
@@ -59,7 +59,7 @@
       $temp .= "<div class='news-item-width'>";
       $temp .= "<div class='news-item'>";
       $temp .= "<div class=' news'>";
-      $temp .= "<img src='https://dashboard.onyos.fr/sendzone/upload/" . $data["news"][$i]["date"] . ".jpg' class='news-img' alt='Image illustrant l'actu'></img>";
+      $temp .= "<img src='https://dashboard.onyos.fr/sendzone/upload/" . $data["news"][$i]["date"] . ".jpg' class='news-img' alt='Not found'></img>";
       $temp .= "<div class='date-section'>";
       $temp .= "<small class='news-date'>" . $data["news"][$i]["date2"] . "</small>";
       $temp .= "</div>";

@@ -13,6 +13,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Léo LESIMPLE">
+  <meta name="description" content="Bienvenue sur le portail Intranet de Cuisinella Villennes/Seine, faites vos demandes de SAV, Navette et de fournitures au même endroit !">
 
   <title>Accueil • Cuisinella Villennes</title>
 
@@ -31,39 +32,11 @@
   <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
   <link rel="manifest" href="./img/favicon/manifest.json">
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="css/general.css">
   <link rel="stylesheet" href="css/nightmode.css">
   <link rel="stylesheet" href="css/darkmode.css">
-  <link rel="stylesheet" href="./css/event.css">
   <link rel="stylesheet" href="css/newcss.css">
-
-  <style>
-    .event-title {
-      font-size: 64px;
-    }
-
-    .expl>p {
-      font-size: 24px !important;
-    }
-
-    .principal-para {
-      margin-bottom: .5rem !important;
-    }
-
-    .link-outline {
-      padding: 0.7rem 1.7rem;
-    }
-
-    .img-event {
-      border-radius: 22px !important;
-      width: auto !important;
-      height: 400px !important;
-      margin: 2.5rem 0;
-      filter: drop-shadow(rgba(0, 0, 0, 0.15) 0px 20px 20px);
-      transform: rotate(5deg);
-    }
-  </style>
 
 </head>
 
@@ -73,53 +46,73 @@
   ?>
   <!-- Full -->
   <div class="div-home-hero">
-    <h1 class="event-title">
-      Pro. Sous tous les angles.
+    <h1 class="principal-title" data-aos="fade-up" data-aos-duration="1800">
+      Demande de Navettes
     </h1>
     <div class="expl">
-      <p class="principal-para">(Re)Découvrez les nouveautés de la nouvelle mouture d'Intranet et des Dashboards. Nouveaux Designs et Formulaires sont au rendez-vous ! </p>
+      <p class="primary-para" data-aos="fade-up" data-aos-duration="1900">Accueillez les Demandes de Navettes ! <br> Sur le même exemple que les Demande d'Intervention SAV, les Demandes de Navettes sont simples d'utilisation, on remplit le Formulaire, on envoie et c'est fait ! </p>
       <div class="principal-link-container">
-        <div class="savethedate" data-aos-duration="1300" data-aos-delay="2000" data-aos="fade-up">Le 13 Septembre</div>
-        <a class="link link-principal-hero" style="margin-top:2rem;" href="./afterevent.php">Voir > </a>
+        <a class="link link-principal" href="./form.php" data-aos="fade-up" data-aos-duration="2000">Voir > </a>
       </div>
     </div>
-    <img src="./img/spoiler_event.jpg" class="img-hero img-event" alt="Image montrant le formulaire." width="900" height="auto" loading="lazy">
+    <img src="./img/supply-form.png" class="img-hero" alt="Image montrant le formulaire." width="900" height="auto" loading="lazy" data-aos="fade-up" data-aos-duration="2100">
   </div>
-  <!-- Mid -->
-  <div class="grid div-home-hero-invert" id="info">
-    <div class="doc-col">
-      <div class="mid-col">
-        <h2 class="secondary-title">
-          Demandes de SAV
-        </h2>
-        <p class="secondary-para" style="margin-top: 1rem;">
-          Formulez vos demandes de SAV rapidement avec le formulaire dédié, c'est simple et rapide.
-        </p>
-        <div class="principal-link-container" style="margin-top: 2.5rem;">
-          <a class="link link-secondary-border-hero" href="./form.php">Ouvrir > </a>
-        </div>
-      </div>
-      <div class="mid-img">
-        <img class="fluid-img" src="./img/new-docs.png" alt="Aperçu de la page Documentation">
+  <!-- En plus... -->
+  <div class="image-right-hero div-home-hero-invert">
+    <div class="image-right-text-hero mt-2" data-aos="fade-left" data-aos-duration="2200">
+      <h1 class="secondary-title intrnaet">Intranet 1.4</h1>
+      <p class="secondary-para">(Re)Découvrez les nouveautés d'Intranet dans sa version 1.4 <br>Nouveaux Formulaires, Nouveaux Dashboard, Sécurité renforcée et une page de Statut pour consulter chaque partie du Site en cas de panne et/ou un dysfonctionnement.</p>
+      <div class="btn-container">
+        <a href="./discover.php" class="link link-secondary">Voir ></a>
       </div>
     </div>
-    <div class="news-col">
-      <div class="mid-col">
-        <h2 class="secondary-title">
-          Cuisinell'Actu
-        </h2>
-        <p class="secondary-para">
-          Toutes les actus de Cuisinella Villennes regroupées en un seul point. Vous êtes avertis par mail de l'arrivée d'une nouvelle Cuisinell'Actu, vous ne raterez plus aucune info !
-        </p>
-        <div class="principal-link-container">
-          <a class="link link-secondary-border-hero" href="./form.php">Voir > </a>
-        </div>
-      </div>
-      <div class="mid-img">
-        <img class="fluid-img" src="./img/news-view.png" alt="Aperçu de la page Cuisinell'Actu (màj le 7/08/22)">
-      </div>
+    <div class="image-right-img-hero">
+      <img src="./img/cover-images/cover-1_4.png" class="mid-img" alt="" data-aos="fade-right" data-aos-duration="2200">
     </div>
   </div>
+
+  <div class="image-side-hero">
+    <div class="image-side-text-hero mt-2" data-aos="fade-up" data-aos-duration="2200">
+      <h1 class="secondary-title">Demande de Fournitures</h1>
+      <p class="secondary-para">Ce formulaire vous est mis à disposition pour demander les fournitures de bureau dont vous avez besoin chez JPG. Nous nous chargeons ensuite de les commander. Si la référence que vous souhaitez n'est pas disponible, vous serez prévenus. </p>
+      <div class="btn-container">
+        <a href="./supply.php" class="link link-secondary">Voir ></a>
+      </div>
+    </div>
+    <div class="image-side-img-hero">
+      <img src="./img/supply-view.png" class="mid-img" alt="" data-aos="fade-down" data-aos-duration="2200">
+    </div>
+  </div>
+
+  <div class="image-right-hero">
+    <div class="image-right-text-hero mt-2" data-aos="fade-right" data-aos-duration="2200">
+      <h1 class="secondary-title">Demande de SAV</h1>
+      <p class="secondary-para">Formulez vos demandes d'intervention SAV, ce formulaire ne sert que pour la planification, une fois que tous les éléments Navette sont arrivés, si cela n'est pas fait diriger vous d'abord vers le formulaire "Demandes de Navettes".</p>
+      <div class="btn-container">
+        <a href="./form.php" class="link link-secondary">Voir ></a>
+      </div>
+    </div>
+    <div class="image-right-img-hero">
+      <img src="./img/sav-form.png" class="mid-img" alt="" data-aos="fade-left" data-aos-duration="2200">
+    </div>
+  </div>
+
+  <div class="image-side-hero">
+    <div class="image-side-text-hero mt-2 " data-aos="fade-down" data-aos-duration="2200">
+      <h1 class="secondary-title">Documentation</h1>
+      <p class="secondary-para">Formulez vos demandes d'intervention SAV, ce formulaire ne sert que pour la planification, une fois que tous les éléments Navette sont arrivés, si cela n'est pas fait diriger vous d'abord vers le formulaire "Demandes de Navettes".</p>
+      <div class="btn-container">
+        <a href="./docs.php" class="link link-secondary">Voir ></a>
+      </div>
+    </div>
+    <div class="image-side-img-hero">
+      <img src="./img/docs-home.png" class="mid-img" alt="" data-aos="fade-up" data-aos-duration="2200">
+    </div>
+  </div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <!-- Footer -->
   <?php
   include('./assets/footer.php')

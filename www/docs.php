@@ -13,7 +13,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Léo LESIMPLE">
-  
+
   <title>Documentation • Cuisinella Villennes</title>
 
   <link rel="apple-touch-icon" sizes="57x57" href="./img/favicon/apple-icon-57x57.png">
@@ -30,16 +30,29 @@
   <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
   <link rel="manifest" href="./img/favicon/manifest.json">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="css/newcss.css">
   <link rel="stylesheet" href="css/general.css">
   <link rel="stylesheet" href="css/nightmode.css">
   <link rel="stylesheet" href="css/darkmode.css">
 </head>
 
+<style>
+  @media screen and (max-width:900px) {
+    .principal-para-docs {
+      font-size: 20px !important;
+    }
+
+    .principal-title-docs {
+      font-size: 30px !important;
+      margin-bottom: 2.5rem !important;
+    }
+  }
+</style>
+
 <body>
   <?php
-    include('./assets/nav.php')
+  include('./assets/nav.php')
   ?>
   <div class="intro-section docs-title">
     <h1 class="principal-title-docs" style="margin-bottom:0;">Documentation</h1>
@@ -49,119 +62,73 @@
   <h4 class="docs-headlines">À la une !</h4>
   <div class="docs-grid">
     <div class="highlight-section">
-      <h1 class="jumbotron-first-title"><i class="bi bi-docs bi-bookmark-fill"></i> Raccourcis sur le Bureau</h1>
-      <p class="jumbotron-first-desc">Ajoutez Intranet sur votre bureau pour un accès direct ! C'est simple et rapide.
-        <br> Votre productivité n'en sera qu'accrue !</p>
-      <a href="./docs/pc-side/bookmark.php" class="link link-principal-hero">Voir</a>
+      <h1 class="jumbotron-first-title"><i class="bi bi-docs bi-box-seam-fill"></i> Demande de Navettes</h1>
+      <p class="jumbotron-first-desc">
+        <span class="new">Nouveau !</span> Demandez vos Navettes directement depuis Intranet ! <br> Faites le modèle des Demandes de SAV, les Demandes sont simples et rapides à formuler !
+      </p>
+      <a href="./docs/navettes.php" class="link link-principal">Voir</a>
     </div>
     <div class="second-section">
-      <h1 class="jumbotron-second-title"><i class="bi bi-docs bi-ui-radios"></i> Remplir le Formulaire</h1>
-      <p class="jumbotron-second-desc">Apprenez ou ré-apprenez à remplir le formulaire. La page a été mise à jour avec
-        les nouveaux champs ! </p>
-      <a href="./docs/learn-input.php" class="link link-principal-hero">Voir</a>
+      <h1 class="jumbotron-second-title"><i class="bi bi-docs bi-vector-pen"></i> Demande de Fournitures</h1>
+      <p class="jumbotron-second-desc"><span class="new">Nouveau !</span> Les Demandes de Fournitures débarque sur Intranet (remplacement du Google Forms), commandez stylos, cahier et autres fournitures de Bureau depuis Intranet ! </p>
+      <a href="./docs/supply.php" class="link link-principal">Voir</a>
     </div>
     <div class="third-section">
-      <h1 class="jumbotron-second-title"><i class="bi bi-docs bi-newspaper"></i> Les Cuisinell'Actu</h1>
-      <p class="jumbotron-second-desc">Qu'est-ce-que c'est ? À quoi ça sert ? Comment ça marche ? Toutes les questions
-        sont traitées dans cette page de documentation.</p>
-      <a href="./docs/cuisinellactu.php" class="link link-principal-hero">Voir</a>
+      <h1 class="jumbotron-second-title"><i class="bi bi-docs bi-clipboard-data"></i> Les Nouveaux Dashboards</h1>
+      <p class="jumbotron-second-desc">Un Dashboard revu de fond en comble ! Un Design Moderne, plus chaleureux ainsi que le Mode Sombre et la compatibilité mobile s'invitent sur vos Dashboard !</p>
+      <a href="./docs/dashboard.php" class="link link-principal">Voir</a>
     </div>
   </div>
   <h4 class="docs-headlines">En plus...</h4>
-  <div class="docs-more" style="margin-bottom:1.5rem !important;">
-    <div class="left-side border-side">
-      <div class="item-docs">
-        <h3 class="more-docs-title">Numéros d'AR</h3>
-        <p class="more-docs-para">Trouver les numéros d'AR, comment les entrer dans le formulaire. Télécharger le
-          tableau des AR.</p>
-        <div class="link-docs-div">
-          <a class="link-docs-primary" href="./docs/ar-number.php">Voir ></a>
-        </div>
-      </div>
-      <div class="item-docs">
-        <h3 class="more-docs-title">L'envers du décor !</h3>
-        <p class="more-docs-para">Découvrir comment ça marche et quelles technologies sont utilisées par Intranet et leurs
-          fonctions respectives.</p>
-        <div class="link-docs-div">
-          <a class="link-docs-primary" href="./docs/discover-code.php">Voir ></a>
-        </div>
-        <div class="item-docs">
-          <h3 class="more-docs-title">Remplacer l'adresse mail d'Intranet</h3>
-          <p class="more-docs-para">Vous en avez marre de voir une adresse mail trop longues dans vos notifications
-            Intranet, cette documentation est pour vous !</p>
-          <div class="link-docs-div">
-            <a class="link-docs-primary link-docs-disabled" href="">Bientôt ></a>
-          </div>
-        </div>
-        <div class="item-docs" style="display:none">
-          <h3 class="more-docs-title">Prévenir les autres</h3>
-          <p class="more-docs-para">Vous avez fais une demande de SAV et vous voulez prévenir certains autres vendeurs
-            que'elle a été faites, vous êtes au très bon endroit.</p>
-          <div class="link-docs-div">
-            <a class="link-docs-primary" href="">Voir ></a>
-          </div>
-        </div>
-        <div class="item-docs">
-          <h3 class="more-docs-title">Design System</h3>
-          <p class="more-docs-para">Un fichier avec tous les élements graphique du site, c'est ça le design system.
-            <br>Logiciels requis (détails dans l'article)</p>
-          <div class="link-docs-div">
-            <a class="link-docs-primary link-docs-disabled" href="">Bientôt ></a>
-          </div>
-        </div>
-      </div>
-      </div>
-      <div class="right-side">
-        <div class="item-docs">
-          <h3 class="more-docs-title">Intranet 1.3</h3>
-          <p class="more-docs-para">Un train entier de nouveautés pour vous ! Du design, de la surpuissance, plein de
-            nouveautés pour accroitre votre productivité !</p>
-          <div class="link-docs-div">
-            <a class="link-docs-primary" href="./discover.php">Voir ></a>
-          </div>
-          <div class="item-docs">
-            <h3 class="more-docs-title">Cuisinell'Actu</h3>
-            <p class="more-docs-para">Découvrez les Cuisinell'Actu, les actualités faites pour Cuisinella Villennes,
-              vous êtes prévenus de l'arrivée d'une nouvelle Actu par mail..</p>
-            <div class="link-docs-div">
-              <a class="link-docs-primary" href="./docs/cuisinellactu.php">Voir ></a>
-            </div>
-          </div>
-          <div class="item-docs">
-            <h3 class="more-docs-title">Nouveautés à venir</h3>
-            <p class="more-docs-para">Découvrez les annonces des prochaines fonctionnalités sur cette page ! <br>Toutes
-              les nouvelles fonctionnalités mineures sont régies ici !</p>
-            <div class="link-docs-div">
-              <a class="link-docs-primary" href="./docs/nouveau.php">Voir ></a>
-            </div>
-          </div>
-          <div class="item-docs">
-            <h3 class="more-docs-title">Mentions Légales</h3>
-            <p class="more-docs-para">Toutes les informations sur le site, l'hébergeur et bien-sûr l'auteur ! Les
-              informations concernant les cookies, le traitement des données personnelles. </p>
-            <div class="link-docs-div">
-              <a class="link-docs-primary" target="_blank"
-                href="https://leolesimple.notion.site/Mentions-L-gales-6f8a33a3388d4ef9a80a7f3acba3a507">Voir ></a>
-            </div>
-          </div>
-          <div class="item-docs">
-            <h3 class="more-docs-title">RGPD</h3>
-            <p class="more-docs-para">Le Règlement général sur la protection des données est une loi européenne qui
-              oblige le site a donner des informations sur les données personelles prélévées. </p>
-            <div class="link-docs-div">
-              <a class="link-docs-primary" target="_blank"
-                href="https://leolesimple.notion.site/RGPD-c006027ffae9436b858641db02c9f988">Voir ></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <ul class="flex-container">
+    <li class="flex-item">
+      <h2 class="intranetv13">Intranet 1.4</h2>
+      <p>Nouveaux Formulaires, Statut du Site en temps réel. Des Dashboards revus de fond en comble. <br>Tout ça avec encore plus de sécurité !</p>
+      <a class="link-docs-primary" href="./discover.php">Voir ></a>
+    </li>
+    <li class="flex-item">
+      <h2>Formulaire d'Intervention SAV</h2>
+      <p>Faites planifier vos SAV en quelques clics avec le formulaire de demandes d'intervention SAV.<br> Aussi simple que ça !</p>
+      <a class="link-docs-primary" href="./docs/learn-input.php">Voir ></a>
+    </li>
+    <li class="flex-item">
+      <h2>Raccourcis sur le Bureau</h2>
+      <p>Ajoutez Intranet sur votre bureau pour un accès direct ! C'est simple et rapide.
+        <br>Votre productivité n'en sera qu'accrue !
+      </p>
+      <a class="link-docs-primary" href="./docs/pc-side/bookmark.php">Voir ></a>
+    </li>
+    <li class="flex-item">
+      <h2>Cuisinell'Actu</h2>
+      <p>Découvrez les Cuisinell'Actu, les actualités faites pour Cuisinella Villennes, vous êtes prévenus de l'arrivée d'une nouvelle Actu par mail..</p>
+      <a class="link-docs-primary" href="./docs/cuisinellactu.php">Voir ></a>
+    </li>
+    <li class="flex-item">
+      <h2>Pendant ce temps en coullisses...</h2>
+      <p>Découvrez comment le site est pensé, fabriqué, et comment marche ses éléments ! Ainsi que comment le site vous assure une sécurité constante !</p>
+      <a class="link-docs-primary" href="./docs/discover-code.php">Voir ></a>
+    </li>
+    <li class="flex-item">
+      <h2>Trouver le Numéro d'AR</h2>
+      <p>Pour remplir certains formulaires, vous avez besoin du numéro d'AR de votre projet. <br> Vous y trouverez tout l'explication ici !</p>
+      <a class="link-docs-primary" href="./docs/ar-number.php">Voir ></a>
+    </li>
+    <li class="flex-item">
+      <h2>Mentions Légales</h2>
+      <p>Toutes les informations sur le site, l'hébergeur et bien-sûr l'auteur, les cookies et le traitement des données personnelles.</p>
+      <a class="link-docs-primary" href="https://leolesimple.notion.site/Mentions-L-gales-6f8a33a3388d4ef9a80a7f3acba3a507">Voir ></a>
+    </li>
+    <li class="flex-item">
+      <h2>RGPD</h2>
+      <p>Consultez le Réglement Général sur la Protection des Données et comment le site traite et stocke vos données !</p>
+      <a class="link-docs-primary" target="_blank" href="https://leolesimple.notion.site/RGPD-c006027ffae9436b858641db02c9f988">Voir ></a>
+    </li>
+  </ul>
 
   <!-- Footer -->
   <?php
-        include('./assets/footer.php')
-      ?>
+  include('./assets/footer.php')
+  ?>
 </body>
 
 </html>

@@ -5,79 +5,98 @@
     © Léo LESIMPLE
 */
 :root {
-  --link-dark:#212529;
+  --link-dark: #212529;
   --bg-color: #eaeef6 !important;
-  --news-color:#000;
+  --news-color: #000;
 }
-  
+
 [data-theme=dark] {
   --font-color: #fff;
   --bg-color: #1B1E24 !important;
   --heading-color: #fff;
-  --bs-light-rgb:#1B1E24;
-  --bs-dark-rgb:#ffffff;
-  --bs-body-color:#fff;
-  --navbar-color:#fff;
-  --navbar-color-disabled:rgb(87, 87, 87);
-  --navbar-color-active:rgb(204, 200, 200);
-  --color-btn:#fff;
-  --border-btn:#fff;
-  --accordion-bg:#1b1d26;
-  --link-dark:#fff;
-  --news-color:#fff;
-  --news-color-dark:#fff;
+  --bs-light-rgb: #1B1E24;
+  --bs-dark-rgb: #ffffff;
+  --bs-body-color: #fff;
+  --navbar-color: #fff;
+  --navbar-color-disabled: rgb(87, 87, 87);
+  --navbar-color-active: rgb(204, 200, 200);
+  --color-btn: #fff;
+  --border-btn: #fff;
+  --accordion-bg: #1b1d26;
+  --link-dark: #fff;
+  --news-color: #fff;
+  --news-color-dark: #fff;
 }
-i.sun{
- color: rgb(255, 166, 0);
- font-size: 30px;
+
+i.sun {
+  color: rgb(255, 166, 0);
+  font-size: 30px;
 }
-i.moon{
+
+i.moon {
   color: rgb(192, 192, 192);
   font-size: 30px;
 }
+
 body {
- background-color: var(--bg-color);
+  background-color: var(--bg-color);
 }
-.header .moon, .header .sun {
+
+.header .moon,
+.header .sun {
   width: 34px;
   cursor: pointer;
   transition: 0.5s all ease-in-out;
 }
+
 .header .sun:hover {
   -webkit-animation: sun_rotate 1s infinite;
   animation: sun_rotate 1s infinite;
 }
+
 .header .moon:hover {
   transform: scale(1.1);
 }
+
 .header .hide {
- display: none;
+  display: none;
 }
+
 .navbar-light .navbar-brand {
- color: var(--font-color) !important;
+  color: var(--font-color) !important;
 }
- .darkdiv-switch{
+
+.darkdiv-switch {
   position: fixed !important;
   bottom: 0 !important;
   right: 0 !important;
   margin: 20px;
   z-index: 10000001 !important;
- }
+}
+
 .navbar-light .navbar-nav .nav-link {
   color: var(--navbar-color) !important;
 }
-.accordion-item, .accordion-header {
+
+.accordion-item,
+.accordion-header {
   background-color: var(--accordion-bg) !important;
   border: 1px solid rgba(0, 0, 0, 0.125);
-  }
+}
+
 .link-dark {
   color: var(--link-dark) !important;
 }
-.title-news,.desc-news{
+
+.title-news,
+.desc-news {
   color: var(--news-color) !important;
 }
+
 @media (prefers-color-scheme: dark) {
-  .title-news,.desc-news{
+
+  .title-news,
+  .desc-news {
     color: var(--news-color-dark) !important;
   }
 }

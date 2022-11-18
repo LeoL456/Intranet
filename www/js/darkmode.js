@@ -15,6 +15,7 @@ darkMode.onclick = function(){
   lightMode.style = "display: block";
   darkMode.style = "display: none";
   localStorage.setItem('theme', 'light');
+  
 }
 
 if (currentTheme) {

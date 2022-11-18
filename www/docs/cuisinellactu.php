@@ -37,7 +37,7 @@
        <span class="details-docs-page">Depuis la page d'accueil :</span> 
        <ul>
            <li>Cliquez sur le lien <span class="nav-item">Cuisinell'Actu</span> dans l'entête de page ou...</li>
-           <li>Cliquez sur le bouton <span class="link link-principal-hero">Voir ></span> sur la page d'accueil.</li>
+           <li>Cliquez sur le bouton <span class="link link-principal">Voir ></span> sur la page d'accueil.</li>
        </ul>
        <span class="details-docs-page">Depuis une autre page :</span> 
         <ul>

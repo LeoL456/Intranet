@@ -45,7 +45,9 @@ code {
     cursor: help;
 }
 
-
+.d-0{
+  display: none !important;
+}
 
 /* Branding */
 

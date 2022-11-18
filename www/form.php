@@ -13,7 +13,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Léo LESIMPLE">
-  
+
   <title>Demandes de SAV • Cuisinella Villennes</title>
 
   <link rel="apple-touch-icon" sizes="57x57" href="./img/favicon/apple-icon-57x57.png">
@@ -58,7 +58,7 @@
         <option value="Tom Coudert">Tom Coudert</option>
         <option value="Kaled Salhi">Kaled Salhi</option>
         <option value="Johan Sacilotto">Johan Sacilotto</option>
-        <option value="Regis Retif">Régis Rétif</option>
+        <option value="Régis Rétif">Régis Rétif</option>
         <option value="Dinis Ferreira">Dinis Ferreira</option>
         <option value="Jessy Laram">Jessy Laram</option>
       </select>
@@ -162,22 +162,46 @@
 
       <h4 class='section-title'>Nom du client</h4>
       <p class="desc-form">Quel est le client concerné ?</p>
-      <input class="" type="text" placeholder="   Nom" name="customer"  required>
+      <input  type="text" placeholder="   Nom" name="customer"  required>
 
       <h4 class='section-title'>Numéro(s) d'AR</h4>
       <p class="desc-form">Précisez le numéro ou les numéros d'AR en relation avec votre demande.</p>
-      <input class="" type="text" placeholder="   N° d'AR" name="ARnumber" >
+      <input  type="text" placeholder="   N° d'AR" name="ARnumber" >
+
+      <h4 class='section-title'>Votre SAV est-il prêt ? <span class="badge-new">Nouveau !</span></h4>
+
+      <select class="form-select" name="pret" aria-label="pret" required>
+        <option selected>Choisissez...</option>
+        <option value="Prêt">SAV prêt (Fiche intervention + colis prêts)</option>
+        <option value="Attente Navette">En attente de la Navette...</option>
+        <option value="Non préparé">Non préparé</option>
+      </select>
 
       <h4 class='section-title'>Commentaires</h4>
-      <textarea class="" type="text" placeholder="   Commentaires..." name="comments" ></textarea>
+      <textarea  type="text" placeholder="   Commentaires..." name="comments" ></textarea>
 
       <div class="container my-5" style="width: 500px;">
-        <button type="submit" class="link link-principal-hero link-submit" style='border:0;' value="Send Form">Envoyer</button>
+        <button type="submit" class="link link-principal link-submit" style='border:0;' value="Send Form">Envoyer</button>
       </div>
     </div>
   </form>
 
-
+  <style>
+    .badge-new {
+      font-size: 12px !important;
+      letter-spacing: -0.3px;
+      font-weight: 800;
+      /* background-color: #E65E25; */
+      /* color: #fff; */
+      color: #E65E25;
+      /* padding: 0.375rem !important; */
+      border-radius: .375rem;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: baseline;
+      line-height: 1;
+    }
+  </style>
 
   <!-- Footer -->
   <?php
