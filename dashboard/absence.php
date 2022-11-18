@@ -1,6 +1,12 @@
-<html lang="fr" nighteye="disabled">
+<html lang="fr">
 
 <head>
+<?php session_start();
+  if (!isset($_SESSION['UserData']['Username'])) {
+    header("location:./auth/login.php");
+    exit;
+  }
+  ?>
   <!--
     Formulaires de Cuisinella Villennes
     HTML 5.1 
@@ -13,144 +19,84 @@
   <meta name="author" content="Léo LESIMPLE">
   <title>Dashboard • Cuisinella Villennes</title>
   <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">  <link rel="stylesheet" href="./css/app.css">
+  <link rel="stylesheet" href="./css/app.css">
   <link rel="stylesheet" href="./css/keyframes.css">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="57x57" href="./img/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="./img/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="./img/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="./img/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="./img/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="./img/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="./img/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="./img/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./img/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="./img/favicon/manifest.json">
 </head>
+
 <body>
-  <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 bg-red" style="max-width:175px !important;" href="#">Cuisinella Villennes</a>
-    <div class="navbar-nav">
-      <div class="nav-item text-nowrap">
-        <a class="nav-link px-3 " href="./auth/logout.php">Déconnexion</a>
-      </div>
-    </div>
-  </header>
-  <?php session_start();
-  if (!isset($_SESSION['UserData']['Username'])) {
-    header("location:./auth/login.php");
-    exit;
-  }
+  <?php
+  include('./assets/nav.php')
   ?>
-  <div class="container-fluid">
-    <div class="row">
-      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-        <div class="position-sticky pt-3">
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <p class="text-center fw-bold">
-                Version 1.3.3
-              </p>
-              <hr>
-              <a class="nav-link" href="./index.php">
-                <i class="bi bi-house"></i>
-                Accueil
-              </a>
-              <a class="nav-link" href="./sav.php">
-                <i class="bi bi-cone-striped"></i>
-                SAV
-              </a>
-              <a class="nav-link" href="./actu.php">
-                <i class="bi bi-newspaper"></i>
-                Cuisinell'Actu
-              </a>
-              <a class="nav-link active" href="./absence.php">
-                <i class="bi bi-briefcase"></i>
-                Absences
-              </a>
-              <a class="nav-link" href="./relance.php">
-                <i class="bi bi-briefcase"></i>
-                Relance
-              </a>
-              <a class="nav-link" href="./maps.php">
-                <i class="bi bi-compass"></i>
-                Plans
-              </a>
-              <a class="nav-link" href="./changelog.php">
-                <i class="bi bi-view-list"></i>
-                Changelog
-              </a>
-            </li>
-          </ul>
-        </div>
+  <div id="overlay"></div>
+  <div id="page">
+    <div class="page-header">
+      <h1 class="page-title">Absences</h1>
+      <p class="page-sub">Ceci sert uniquement le premier jour de l'absence !</p>
     </div>
-  </div>
-  <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 col-md-12 d-md-none d-lg-block mt-4">
-            <h4>Absences</h4>
-          </div>
-          <div class="col-lg-6 col-md-12">
-            <form method="post" enctype="multipart/form-data" name="relance" action="./sendzone/relance/submit.php">
-              <div class="d-flex justify-content-end">
-                <div class="container">
-                  <div class="row">
-                    <div class="col py-md-3">
-                      <select class="form-select disabled" name="absent" aria-label="vendeur" required>
-                        <option selected>Choisissez...</option>
-                        <option value="johan.coudert">Johan Coudert</option>
-                        <option value="tom.coudert">Tom Coudert</option>
-                        <option value="dinis.ferreira">Dinis Ferreira</option>
-                        <option value="khaoula.hammami">Khaoula Hammami</option>
-                        <option value="karine.lesimple">Karine Lesimple</option>
-                        <option value="regis.retif">Régis Rétif</option>
-                        <option value="johan.sacilotto">Johan Sacilotto</option>
-                        <option value="kaled.salhi">Kaled Salhi</option>
-                        <option value="audrey.tichit">Audrey Tichit</option>
-                        <option value="jessy.laram">Jessy Laram</option>
-                      </select>
-                    </div>
-                    <div class="col py-md-3">
-                      <input class="form-control disabled" type="date" name="debutabs" data-date="" data-date-format="DD MMMM YYYY">
-                    </div>
-                    <div class="col py-md-3">
-                      <input class="form-control disabled" type="time" name="heureabs">
-                    </div>
-                    <div class="col py-md-3">
-                      <input class="btn btn-warning disabled" type="submit" value="Envoyer">
-                    </div>
-                  </div>
-                </div>
-              </div>
-          </div>
-        </div>
-        </form>
+
+    <form method="post" enctype="multipart/form-data" name="relance" action="./sendzone/absences/submit.php">
+      <div class="abs-form">
+        <select name="absent" aria-label="vendeur" required>
+          <option selected>Choisissez...</option>
+          <option value="johan.coudert">Johan Coudert</option>
+          <option value="tom.coudert">Tom Coudert</option>
+          <option value="dinis.ferreira">Dinis Ferreira</option>
+          <option value="khaoula.hammami">Khaoula Hammami</option>
+          <option value="karine.lesimple">Karine Lesimple</option>
+          <option value="regis.retif">Régis Rétif</option>
+          <option value="johan.sacilotto">Johan Sacilotto</option>
+          <option value="kaled.salhi">Kaled Salhi</option>
+          <option value="audrey.tichit">Audrey Tichit</option>
+          <option value="jessy.laram">Jessy Laram</option>
+        </select>
+        <input type="date" name="debutabs" data-date-format="DD MMMM YYYY"><br>
       </div>
-    </div>
-    <h4 class="d-none">Historique des Absences</h4>
-    <div class="table-responsive mt-5">
-      <?php
-      $str_data = file_get_contents("./sendzone/relance/relance.json");
-      $data = json_decode($str_data, true);
+      <div class="abs-form" style="max-width: 535px; margin-left:auto;">
+        <textarea autocapitalize="true" name="commentaires"></textarea>
+        <input class="link link-send" type="submit" value="Envoyer">
+      </div>
+    </form>
 
-      $temp = "<table id=\"tblData\" class='table table-striped table-hover'>";
+    <?php
+    $str_data = file_get_contents("../dashboard/sendzone/absences/relance.json");
+    $data = json_decode($str_data, true);
 
-      $temp .= "<tr><th scope='col'>Nom</th>";
-      $temp .= "<th scope='col'>Date de début</th>";
-      $temp .= "<th scope='col'>Heure de début</th>";
+    $temp = "<table id=\"tblData\">";
 
-      for ($i = 0; $i < sizeof($data["historique"]); $i++) {
-        $temp .= "<tr>";
-        $temp .= "<td>" . $data["historique"][$i]["id"] . "</td>";
-        $temp .= "<td>" . $data["historique"][$i]["debutabs"] . "</td>";
-        $temp .= "<td>" . $data["historique"][$i]["heureabs"] . "</td>";
-        $temp .= "</tr>";
-      }
+    $temp .= "<tr class='tr-title'><th style='border-top-left-radius: 20px;' scope='col'>Nom</th>";
+    $temp .= "<th scope='col'>Date de début</th>";
+    $temp .= "<th style='border-top-right-radius: 20px;' scope='col'>Heure de début</th>";
 
-      $temp .= "</table>";
+    for ($i = 0; $i < sizeof($data["historique"]); $i++) {
+      $temp .= "<tr>";
+      $temp .= "<td>" . $data["historique"][$i]["id"] . "</td>";
+      $temp .= "<td>" . $data["historique"][$i]["debutabs"] . "</td>";
+      $temp .= "<td>" . $data["historique"][$i]["heureabs"] . "</td>";
+      $temp .= "</tr>";
+    }
 
-      echo $temp;
-      ?>
-    </div>
+    $temp .= "</table>";
 
-  </main>
+    echo $temp;
+    ?>
   </div>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
-  <!-- JavaScript Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
 </body>
 
 </html>

@@ -17,7 +17,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Privé">
   <meta name="author" content="Léo LESIMPLE">
-  <title>SAV • Dashboard Villennes</title>
+  <title>Navettes • Dashboard Villennes</title>
   <link rel="stylesheet" href="./css/app.css">
   <link rel="stylesheet" href="./css/keyframes.css">
 
@@ -39,50 +39,51 @@
 
 </head>
 
-<body>
+<body id="body">
   <?php
   include('./assets/nav.php')
   ?>
   <div id="overlay"></div>
   <div id="page">
     <div class="page-header">
-      <h1 class="page-title">Tableau des demandes de SAV</h1>
+      <h1 class="page-title">Tableau des demandes de Navettes</h1>
     </div>
-    <div class="btn-group">
-      <input class="search-bar" placeholder="🔍 Rechercher..." type="search" onkeyup="search()" name="" id="myInput">
-      <button onclick="exportTableToExcel('tblData', 'table')" class="link link-excel ">Exporter (.xls)</button>
+    <div class="btn-group multiple-item">
+      <div>
+        <input class="search-bar" placeholder="🔍 Rechercher..." type="search" onkeyup="search()" id="search-input">
+      </div>
+      <div class="multiple-btn">
+        <a onclick="confirm()" class="link link-suppr ">Effacer</a>
+        <button onclick="exportTableToExcel('tblData', 'table')" class="link link-excel ">Exporter (.xls)</button>
+    </div>
     </div>
 
     <?php
-    $str_data = file_get_contents("../www/forms/forms-result.json");
+    $str_data = file_get_contents("../www/sendzone/navette/navette-result.json");
     $data = json_decode($str_data, true);
 
     $temp = "<table id=\"tblData\">";
 
     $temp .= "<tr id='myUL' class='tr-title'>";
     $temp .= "<th style='border-top-left-radius: 20px;' scope='col'>Date</th>";
-    $temp .= "<th scope='col'>Client</th>";
-    $temp .= "<th scope='col'>Vendeur</th>";
-    $temp .= "<th scope='col'>Poseur d'origine</th>";
-    $temp .= "<th scope='col'>Durée</th>";
-    $temp .= "<th scope='col'>Nombre de poseurs</th>";
-    $temp .= "<th scope='col'>Poseur demandé</th>";
     $temp .= "<th scope='col'>N° d'AR</th>";
-    $temp .= "<th scope='col'>SAV préparé</th>";
+    $temp .= "<th scope='col'>Vendeur</th>";
+    $temp .= "<th scope='col'>Gamme</th>";
+    $temp .= "<th scope='col'>Client</th>";
+    $temp .= "<th scope='col'>Référence</th>";
+    $temp .= "<th scope='col'>Délai confirmé </th>";
     $temp .= "<th style='border-top-right-radius: 20px;' scope='col'>Commentaires</th></tr>";
 
-    for ($i = 0; $i < sizeof($data["employees"]); $i++) {
+    for ($i = 0; $i < sizeof($data["navette"]); $i++) {
       $temp .= "<tr>";
-      $temp .= "<td>" . $data["employees"][$i]["date2"] . "</td>";
-      $temp .= "<td style='text-transform:uppercase;'>" . $data["employees"][$i]["customer"] . "</td>";
-      $temp .= "<td>" . $data["employees"][$i]["vendeur"] . "</td>";
-      $temp .= "<td>" . $data["employees"][$i]["Nom"] . "</td>";
-      $temp .= "<td>" . $data["employees"][$i]["Duree"] . "</td>";
-      $temp .= "<td>" . $data["employees"][$i]["Poseurs"] . "</td>";
-      $temp .= "<td>" . $data["employees"][$i]["poseursdemande"] . "</td>";
-      $temp .= "<td>" . $data["employees"][$i]["ARnumber"] . "</td>";
-      $temp .= "<td>" . $data["employees"][$i]["pret"] . "</td>";
-      $temp .= "<td style=\"max-width:210px !important;\">" . $data["employees"][$i]["comments"] . "</td>";
+      $temp .= "<td>" . $data["navette"][$i]["date2"] . "</td>";
+      $temp .= "<td>" . $data["navette"][$i]["ARnumber"] . "</td>";
+      $temp .= "<td>" . $data["navette"][$i]["vendeur"] . "</td>";
+      $temp .= "<td>" . $data["navette"][$i]["gamme"] . "</td>";
+      $temp .= "<td>" . $data["navette"][$i]["client"] . "</td>";
+      $temp .= "<td>" . $data["navette"][$i]["reference"] . "</td>";
+      $temp .= "<td>" . $data["navette"][$i]["week"] . "</td>";
+      $temp .= "<td style=\"max-width:210px !important;\">" . $data["navette"][$i]["commentaire"] . "</td>";
       $temp .= "</tr>";
     }
 
@@ -95,14 +96,14 @@
       function search() {
         // Declare variables 
         var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementById("myInput");
+        input = document.getElementById("search-input");
         filter = input.value.toUpperCase();
         table = document.getElementById("tblData");
         tr = table.getElementsByTagName("tr");
 
         // Loop through all table rows, and hide those who don't match the search query
         for (i = 0; i < tr.length; i++) {
-          td = tr[i].getElementsByTagName("td")[1];
+          td = tr[i].getElementsByTagName("td")[2];
           if (td) {
             txtValue = td.textContent || td.innerText;
             if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -116,12 +117,12 @@
     </script>
 
     <script>
-      function exportTableToExcel(tableID, filename = "Tableau_Recapitulatif_Demandes_SAV22") {
+      function exportTableToExcel(tableID, filename = "Tableau_Recapitulatif_Demandes_Navettes22") {
         var downloadLink;
         var dataType = "application/vnd.ms-excel";
         var tableSelect = document.getElementById(tableID);
         var tableHTML = tableSelect.outerHTML.replace(/ /g, "%20");
-        var filename = "Tableau_Recapitulatif_Demandes_SAV22";
+        var filename = "Tableau_Recapitulatif_Demandes_Navettes22";
         // Specify file name
         filename = filename ? filename + ".xls" : "excel_data.xls";
 
@@ -150,8 +151,22 @@
           return new bootstrap.Tooltip(tooltipTriggerEl)
         })
       }
+
+      function confirm() {
+        const para = document.createElement("div");
+        para.innerHTML = '<div class="confirm-dialog" id="confirm"><h2>Êtes-vous sûr ?</h2><p>Vous allez supprimer une base de données, cette action est irréversible ! <br>Cliquez sur Annulez pour revenir en arrière.</p><div class="btn-group"><a onclick="suppr()" class="link link-suppr">Annuler</a><a href="../www/sendzone/navette/erase-db.php" class="link link-send">Continuer</a></div></div>';
+
+        // Append to another element:
+        document.getElementById("body").appendChild(para);
+      }
+
+      function suppr() {
+        const element = document.getElementById("confirm");
+        element.remove();
+      }
     </script>
   </div>
+  <script src="./js/weather.js"></script>
 </body>
 
 

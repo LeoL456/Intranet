@@ -30,7 +30,7 @@
         $date2 = date('d-m-y');
         $file_name = 'news-result' . '.json';
         $to = 'karine.lesimple@cuisinella78-orgeval.com, audrey.tichit@cuisinella78-orgeval.com, dinis.ferreira@cuisinella78-orgeval.com, johan.coudert@cuisinella78-orgeval.com, johan.sacilotto@cuisinella78-orgeval.com, kaled.salhi@cuisinella78-orgeval.com, khaoula.hammami@cuisinella78-orgeval.com, regis.retif@cuisinella78-orgeval.com, tom.coudert@cuisinella78-orgeval.com, jessy.laram@cuisinella78-orgeval.com';
-         $subject = 'Une Cuisinell\'Actu a été publiée !';
+        $subject = 'Une Cuisinell\'Actu a été publiée !';
         $message = '
                 <!DOCTYPE html>
                 <html lang="fr">
@@ -71,10 +71,8 @@
 
         if ($test == "00") {
             mail($to, $subject, $message, $headers);
-            echo '200';
         } else {
             header('../../absence.php');
-            echo '201';
         }
 
         array_push($arr['news'], $arrne);

@@ -1,1 +1,22 @@
-{"news":[{"titre":"1\u00e8re Edition des Cuisinell'actu ! Mises \u00e0 jour SM2 ","description":"Au cas o\u00f9 vous ne l'auriez pas vu, il y a quelques nouveaut\u00e9s dans SM2 !\r\nVous les trouverez sur la page d'accueil SM2 ou dans le commun dans le dossier Cuisin'Actu","date":"23-05-2022-11-42-34-0534","date2":"23-05-22"},{"titre":"Surpuissance... Pr\u00e9sente !","description":"Chers Vendeurs,\r\nVous \u00eates tous convi\u00e9s le mardi 21 juin 2022 \u00e0 9h30 \u00e0 un \u00e9v\u00e9nement sp\u00e9cial. \r\nPlus d'informations en page d'accueil !","date":"16-06-2022-15-10-01-0601","date2":"16-06-22"}]}
+{
+    "news": [
+        {
+            "titre": "Mises \u00e0 jour SM2 ",
+            "description": "Au cas o\u00f9 vous ne l'auriez pas vu, il y a quelques nouveaut\u00e9s dans SM2 !\r\nVous les trouverez sur la page d'accueil SM2 ou dans le commun dans le dossier Cuisin'Actu",
+            "date": "23-05-2022-11-42-34-0534",
+            "date2": "23-05-22"
+        },
+        {
+            "titre": "BRAVO TOM !",
+            "description": "Les r\u00e9sultats sont tomb\u00e9s hier\u2026 Tom a obtenu son BTS Management Commercial et Op\u00e9rationnel ! F\u00e9licitations :-D ",
+            "date": "05-07-2022-10-57-33-0733",
+            "date2": "05-07-22"
+        },
+        {
+            "titre": "\ud83c\udf89 Pro. Sous tous les angles.",
+            "description": "C'est la rentr\u00e9e et on vous a r\u00e9serv\u00e9 pleins de nouveaut\u00e9s ! Rejoignez-nous le 8 Septembre \u00e0 9h30, \u00e0 la fin de la r\u00e9union, Karine vous pr\u00e9sentera les nouveaut\u00e9s et \u00e9volutions qu'Intranet vous r\u00e9serve. T\u00e9l\u00e9chargez le fichier Calendrier accessible en page d'accueil pour \u00eatre pr\u00e9venu le jour J.",
+            "date": "30-08-2022-12-07-53-0853",
+            "date2": "30-08-22"
+        }
+    ]
+}

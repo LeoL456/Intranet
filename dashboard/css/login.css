@@ -1,85 +1,339 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,slnt,wdth,wght,GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC@8..144,-5,76,530,-57,388,28,689,-233,707,497,760&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,slnt,wdth,wght,GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC@8..144,-5,51.3,497,-175,416,59,732,-216,733,496,760&display=swap');
 
-.bg-red {
-  background: rgba(252, 48, 48, 0.749);
+body {
+  background-image: url(../img/applepark_visitorcenter_opening_entrance_20171117.jpg) !important;
+  background-color: #fff;
+  background-size: cover !important;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Flex', sans-serif !important;
+  font-style: italic;
+  font-stretch: 100;
+  font-variation-settings: 'GRAD' 46, 'slnt' -2, 'XTRA' 446, 'XOPQ' 45, 'YOPQ' 29, 'YTLC' 514, 'YTUC' 712, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738;
+  transition: all 1s !important;
+  overflow: hidden !important;
+  transition: all 1s !important;
 }
 
-@media screen and (max-width:768px) {
-  .login {
-    display: none !important;
-  }
+a {
+  color: #1F1F1F;
+}
+
+.d-none {
+  display: none !important;
+}
+
+header {
+  background-color: #B6ABA0;
+  color: #fff;
+  width: 100%;
+  padding: 15px !important;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 36px;
+  line-height: 16px;
+  margin: 0 !important;
+  color: #FFFFFF;
+}
+
+.header-login {
+  font-size: 56px;
+  text-align: center !important;
+  font-variation-settings: 'GRAD' 150, 'slnt' -2, 'XTRA' 446, 'XOPQ' 45, 'YOPQ' 29, 'YTLC' 514, 'YTUC' 712, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738 !important;
 }
 
 .login {
-  color: rgb(0, 0, 0) !important;
-  width: 30% !important;
-  height: auto !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  color: #1F1F1F !important;
+  width: 40% !important;
+  height: fit-content;
   border-radius: 20px;
-  padding: 4rem;
-  background: rgba(252, 48, 48, 0.749);
+  padding: 2rem 4rem;
+  background-color: rgba(174, 159, 142, 0.8);
   backdrop-filter: blur(9px) !important;
-  -webkit-backdrop-filter: blur(9px) !important;
-  position: fixed;
-  z-index: 2;
+  -webkit-backdrop-filter: blur(10px);
+  max-height: max-content;
 }
 
-.bg-image {
-  position: fixed;
-  z-index: 1 !important;
+.label-input {
+  margin-bottom: 0 !important;
+  font-size: 1.6rem;
 }
 
-.bg-image {
-  width: 100vw;
-  height: 100vh;
-}
-
-.h1-connect {
-  font-size: 50px !important;
-  font-weight: 300;
-  margin-bottom: 30px !important;
+.btn-submit {
+  cursor: pointer !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  padding: 0.7rem;
+  margin: 1rem 0;
+  border-radius: 5px;
+  border: 0;
+  background: rgba(217, 217, 217, 0.8) !important;
   font-family: 'Roboto Flex', sans-serif !important;
+  font-size: 15px;
   font-style: italic;
   font-stretch: 100;
   font-variation-settings: 'GRAD' 46, 'slnt' -2, 'XTRA' 446, 'XOPQ' 45, 'YOPQ' 29, 'YTLC' 514, 'YTUC' 712, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738;
+}
+
+.btn-submit:hover {
+  background: rgba(193, 193, 193, 0.8) !important;
+  color: #414141;
+  transition: all .7s !important;
+}
+
+.username,
+.password {
+  text-align: center !important;
 }
 
 h4 {
+  text-align: start !important;
+}
+
+select{
+  width: 100%;
+  padding: 0.8rem;
+  margin: 10px 0 !important;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  border: 0;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+  font-family: 'Roboto Flex', sans-serif !important;
+  font-size: 15px;
+  font-style: italic;
+  font-stretch: 100;
+  font-variation-settings: 'GRAD' 46, 'slnt' -2, 'XTRA' 446, 'XOPQ' 45, 'YOPQ' 29, 'YTLC' 514, 'YTUC' 712, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738;
+}
+
+.login-input {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 10px 0 !important;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  border: 0;
+}
+
+.login-input::placeholder {
+  font-size: 1rem !important;
+  font-weight: 200;
+  font-family: 'Roboto Flex', sans-serif !important;
+  font-size: 15px;
+  font-style: italic;
+  font-stretch: 100;
+  font-variation-settings: 'GRAD' 46, 'slnt' -2, 'XTRA' 446, 'XOPQ' 45, 'YOPQ' 29, 'YTLC' 514, 'YTUC' 712, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738;
+}
+
+.btn-submit,
+.mdp-lost {
+  float: inline-end !important;
+}
+
+.mdp-lost {
+  padding: 1rem !important;
+  margin-top: .655rem !important;
+  color: #1F1F1F !important;
+}
+
+.p-incorrect {
+  color: #7c0f0f;
   font-family: 'Roboto Flex', sans-serif !important;
   font-style: italic;
   font-stretch: 100;
   font-variation-settings: 'GRAD' 46, 'slnt' -2, 'XTRA' 446, 'XOPQ' 45, 'YOPQ' 29, 'YTLC' 514, 'YTUC' 712, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738;
-
 }
 
-.input-group-text {
-  display: flex;
-  align-items: center;
-  padding: .375rem .75rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #ffffff;
-  text-align: center;
-  white-space: nowrap;
-  background-color: #464646;
-  border: 1px solid #000000;
-  border-radius: .375rem;
+
+/* Alert */
+
+.alert {
+  background: rgba(208, 190, 170, 0.8) !important;
+  border: 1px solid rgb(154, 141, 125);
+  color: rgb(92, 84, 74);
+  padding: 1rem;
+  border-radius: 9px;
+  position: absolute;
+  transition: all 1s !important;
+  font-family: 'Roboto Flex', sans-serif !important;
+  font-style: italic;
+  font-stretch: 100;
+  font-variation-settings: 'GRAD' 46, 'slnt' -2, 'XTRA' 446, 'XOPQ' 45, 'YOPQ' 29, 'YTLC' 514, 'YTUC' 712, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738;
 }
 
-.form-control {
-  display: block;
-  width: 100%;
-  padding: .375rem .75rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #ffffff;
-  background-color: #4d4d4d;
-  background-clip: padding-box;
-  border: 1px solid #38424b;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border-radius: .375rem;
-  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+.closebtn {
+  margin-left: 15px;
+  color: #000;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  transition: all 1s !important;
+}
+
+.closebtn:hover {
+  color: #1F1F1F;
+  transition: all 1s !important;
+}
+
+
+
+/* Switch */
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+@media screen and (max-width:800px) {
+  .login {
+    width: 100% !important;
+    height: 100vh !important;
+    position: fixed;
+    z-index: 1 !important;
+    background-color: rgba(174, 159, 142, 0.7);
+    max-height: none !important;
+  }
+
+  form {
+    padding: 2rem !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .dashboard-header {
+    z-index: 100 !important;
+    position: fixed;
+  }
+
+  .p-incorrect {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #7c0f0f;
+    font-family: 'Roboto Flex', sans-serif !important;
+    font-style: italic;
+    font-stretch: 100;
+    font-variation-settings: 'GRAD' 46, 'slnt' -2, 'XTRA' 446, 'XOPQ' 45, 'YOPQ' 29, 'YTLC' 514, 'YTUC' 712, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738;
+  }
+
+  .mdp-lost{
+    width: 100%;
+    font-size: 10px !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body{
+    background-image: url(../img/visitors-center-night.jpeg) !important;
+    color: #fff !important;
+  }
+
+  .dashboard-header{
+    position: fixed;
+    z-index: 3;
+    background:#333333; 
+  }
+
+  .label-input{
+    color: #fff;
+  }
+
+  ::placeholder{
+    color: #000 !important;
+  }
+
+  .mdp-lost{
+    color: #fff !important;
+  }
+
+  .login{
+    position: fixed !important;
+    z-index: 2;
+    background: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  #overlay{
+    width: 100% !important;
+    height: 100vh !important;
+    background-color: rgba(0, 0, 0, 0.428);
+    position: fixed !important;
+    z-index: 1 !important;
+  }
 }
