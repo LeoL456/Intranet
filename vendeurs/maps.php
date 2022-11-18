@@ -1,6 +1,12 @@
 <html lang="fr" nighteye="disabled">
 
 <head>
+  <?php session_start();
+  if (!isset($_SESSION['UserData']['Username'])) {
+    header("location:./auth/login.php");
+    exit;
+  }
+  ?>
   <!--
     Formulaires de Cuisinella Villennes
     HTML 5.1 
@@ -11,98 +17,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Privé">
   <meta name="author" content="Léo LESIMPLE">
-  <title>Cuisinell'Actu • Cuisinella Villennes</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-  <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.js'></script>
-  <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css' rel='stylesheet' />
+  <title>Maps • Cuisinella Villennes</title>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js"></script>
   <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
   <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
+  <script src="./js/mapbox-directions.js"></script>
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css" type="text/css">
+  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-language/v1.0.0/mapbox-gl-language.js'></script>
   <link rel="stylesheet" href="./css/app.css">
   <link rel="stylesheet" href="./css/keyframes.css">
   <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="57x57" href="./img/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="./img/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="./img/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="./img/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="./img/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="./img/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="./img/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="./img/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./img/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="./img/favicon/manifest.json">
 
 </head>
 
-<body onload="load()">
-  <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 bg-red" style="max-width:175px !important;" href="#">Cuisinella
-      Orgeval</a>
-    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="navbar-nav">
-      <div class="nav-item text-nowrap">
-        <a class="nav-link px-3 " href="./auth/logout.php">Déconnexion</a>
-      </div>
-    </div>
-    <style>
-      #sidebarMenu {
-        margin-top: auto !important;
-        margin-bottom: auto;
-        height: 376px;
-        padding-top: 0 !important;
-        padding-bottom: 40px;
-      }
-
-      .headmove {
-        text-align: center !important;
-        cursor: move !important;
-        margin-bottom: 0 !important;
-        padding-top: 16px !important;
-        padding-bottom: 16px !important
-      }
-
-      .mapboxgl-ctrl-geocoder input[type='text'] {
-        font-size: 15px !important;
-        padding: 6px 35px !important;
-      }
-
-      .mapbox-directions-origin .mapbox-form-label {
-        background: #ff3e29 !important
-      }
-
-      .mapbox-form-label {
-        background: #f11800 !important
-      }
-    </style>
-  </header>
-  <?php session_start();
-  if (!isset($_SESSION['UserData']['Username'])) {
-    header("location:./auth/login.php");
-    exit;
-  }
+<body>
+  <?php
+  include('./assets/nav.php')
   ?>
-  <div class="container-fluid">
-    <div class="row">
-      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-        <div class="position-sticky pt-3">
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <p class="text-center fw-bold" id="version"></p>
-              <hr>
-              <a class="nav-link" href="./index.php">
-                <i class="bi bi-house"></i>
-                Accueil
-              </a>
-              <a class="nav-link active" href="./maps.php">
-                <i class="bi bi-compass"></i>
-                Plans
-              </a>
-              <a class="nav-link" href="./changelog.php">
-                <i class="bi bi-view-list"></i>
-                Changelog
-              </a>
-            </li>
-          </ul>
-        </div>
-    </div>
-
-  </div>
-  </nav>
-  </div>
-  </div>
   <main class="col-12">
-    <div id='map' style='width: 100%; height: 100vh;'></div>
+    <div id='map' style='width: 100%; height: 100vh; border-radius:0 !important;'></div>
     <script>
       mapboxgl.accessToken = 'pk.eyJ1IjoibGVvbDQ1NiIsImEiOiJja3ByNjJ4ZG8wNDI5MnFwODYwemd3eHgxIn0.__6W_S-kcyNy4uB_mpL7UQ';
       var map = new mapboxgl.Map({
@@ -110,9 +58,43 @@
         style: 'mapbox://styles/mapbox/streets-v11',
         center: [1.98393, 48.9293],
         zoom: 12,
-
       });
 
+      map.on('load', () => {
+        // Set the default atmosphere style
+        map.setFog({});
+      });
+
+      map.on('load', () => {
+        map.addSource('10m-bathymetry-81bsvj', {
+          type: 'vector',
+          url: 'mapbox://mapbox.9tm8dx88'
+        });
+
+        map.addLayer({
+            'id': '10m-bathymetry-81bsvj',
+            'type': 'fill',
+            'source': '10m-bathymetry-81bsvj',
+            'source-layer': '10m-bathymetry-81bsvj',
+            'layout': {},
+            'paint': {
+              'fill-outline-color': 'hsla(337, 82%, 62%, 0)',
+              // cubic bezier is a four point curve for smooth and precise styling
+              // adjust the points to change the rate and intensity of interpolation
+              'fill-color': [
+                'interpolate',
+                ['cubic-bezier', 0, 0.5, 1, 0.5],
+                ['get', 'DEPTH'],
+                200,
+                '#78bced',
+                9000,
+                '#15659f'
+              ]
+            }
+          },
+          'land-structure-polygon'
+        );
+      });
       /* Given a query in the form "lng, lat" or "lat, lng"
        * returns the matching geographic coordinate(s)
        * as search results in carmen geojson format,
@@ -214,7 +196,7 @@
             },
             'paint': {
               'line-opacity': 0.6,
-              'line-color': 'rgb(53, 175, 109)',
+              'line-color': 'rgba(53, 175, 109,0)',
               'line-width': 2
             }
           },
@@ -327,14 +309,10 @@
           labelLayerId
         );
       });
+
       const language = new MapboxLanguage();
       map.addControl(language);
     </script>
-  </main>
-  <script src="./js/version.js"></script>
 </body>
-<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-<script src="./js/drag.js"></script>
 
 </html>

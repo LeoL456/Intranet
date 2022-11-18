@@ -6454,7 +6454,7 @@
       value: true
     });
     
-    var _ponyfill = require('./ponyfill.js');
+    var _ponyfill = require('./ponyfill.js.js');
     
     var _ponyfill2 = _interopRequireDefault(_ponyfill);
     
@@ -8632,7 +8632,7 @@
       value: true
     });
     
-    var _action_types = require('../constants/action_types.js');
+    var _action_types = require('../constants/action_types.js.js');
     
     var types = _interopRequireWildcard(_action_types);
     
